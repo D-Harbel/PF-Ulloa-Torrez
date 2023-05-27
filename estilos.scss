@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;500;600&family=Ysabeau:ital,wght@1,200&display=swap');
+
+//font
+$font1: 'Edu NSW ACT Foundation', cursive;
+$font2: 'Ysabeau', sans-serif;
+
+//color
+$color1: orange;
+$color2: red;
+$color3: rgba(255, 0, 0, 0.81);
+$color4: white;
+$color5: rgba(210, 83, 28, 0.755);
+$color6: rgb(0, 153, 255);
+$color7: #333;
+
+//animacion
+@keyframes animacion {
+    0% {
+        box-shadow: 0 0 0 0 $color5, 0 0 0 0 $color5;
+    }
+
+    30% {
+        box-shadow: 0 0 0 40px $color5, 0 0 0 0 $color5;
+    }
+
+    65% {
+        box-shadow: 0 0 0 40px $color5, 0 0 0 10px $color5;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 $color5, 0 0 0 5px $color5;
+    }
+}
+
+@mixin sizes ($widht, $height) {
+    height: $height;
+    width: $widht;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.body-contac {
+    background-image: linear-gradient(111.4deg, rgba(238, 113, 113, 1) 1%, rgba(246, 215, 148, 1) 58%);
+}
+
+.navbar {
+    background-color: $color1;
+
+    .nav-link {
+        color: $color4 !important;
+        text-align: right;
+    }
+
+    .nav-link:hover {
+        color: $color2 !important;
+        font-weight: bold;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .fa-solid {
+        color: $color2;
+    }
+}
+
+
+.jumbotron {
+    background-image: url(img/jumbo\ back.jpg);
+    background-size: cover;
+    font-size: 30px;
+    color: $color1;
+    border-radius: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+
+.jumbotron h1 {
+    font-size: 60px;
+}
+
+.jumbotron p {
+    color: $color5;
+}
+
+
+h2 {
+    text-align: center;
+    text-transform: capitalize;
+    background-color: $color5;
+    margin-bottom: 0;
+    font-family: $font1;
+    padding: 10px;
+}
+
+.a1 {
+    @include sizes(250px, 170px);
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+.index-article:hover {
+    background-color: $color5;
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 0 0 10px $color5, 0 0 40px $color5, 0 0 80px $color5;
+    border-radius: 20%;
+}
+
+.p-index {
+    text-align: center;
+    text-shadow: 0 0 8px $color7;
+    font-weight: bold;
+    color: $color4;
+    background-color: $color5;
+    border: 2px solid $color1;
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    font-family: $font1;
+    text-transform: capitalize;
+}
+
+section {
+    background-image: url(img/sec\ back.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.S-nosotros {
+    background-image: url(img/nos\ back.jpg);
+    background-size: cover;
+}
+
+footer {
+    text-align: center;
+    font-size: 15px;
+    color: $color4;
+    background-color: $color7;
+    text-transform: capitalize;
+    font-family: $font2;
+    padding: 20px;
+
+    .redes a {
+        color: $color6;
+        letter-spacing: 5px;
+        font-size: 25px;
+    }
+}
+
+
+.nosright {
+    @include sizes(100%, 50%);
+    color: $color4;
+    background-color: $color5;
+    font-size: 25px;
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: $font2;
+    margin-bottom: 30px;
+    
+}
+
+.nosright h3 {
+    color: $color1;
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.nosleft {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .img1 {
+        @include sizes(400px, 370px);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+
+.item {
+    @include sizes(300px, 100%);
+    border: 3px solid $color1;
+    font-family: $font1;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 20px;
+    box-shadow: inset 0 0 5px $color7;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    .item-img {
+        @include sizes(100%, 190px);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        border-radius: 20%;
+    }
+
+    .item-madre {
+        background-image: url(img/madre.jpg);
+    }
+
+    .item-artesanal {
+        background-image: url(img/Artesanal.jpg);
+    }
+
+    .item-ciabatta {
+        background-image: url(img/cibatta.jpg);
+    }
+
+    .item-baguette {
+        background-image: url(img/Baguette.jpg);
+    }
+
+    .item-gallego {
+        background-image: url(img/gallego.jpg);
+    }
+
+    .item-molde {
+        background-image: url(img/Molde.jpg);
+    }
+
+    .item-cros {
+        background-image: url(img/Cros.jpg);
+    }
+
+    .item-choco {
+        background-image: url(img/pan\ choco.jpg);
+    }
+
+    .item-muffins {
+        background-image: url(img/Muffins.jpg);
+    }
+
+    .item-canela {
+        background-image: url(img/canela.jpg);
+    }
+
+    .item-alfajor {
+        background-image: url(img/alfajores.jpg);
+    }
+
+    .item-brownis {
+        background-image: url(img/brownis.jpg);
+    }
+}
+
+.item:hover {
+    background-color: $color5;
+    transform: scale(1.1) rotate(6deg);
+    transform-origin: right top 0;
+    transition: all 0.9s;
+    animation: animacion 2s linear infinite;
+    border-radius: 20%;
+}
+
+
+.D-sec {
+    text-align: center;
+
+    iframe {
+        width: 100%;
+    }
+
+    .D-form {
+        color: $color4;
+        padding: 30px;
+        box-shadow: 0px 0px 15px 3px $color7;
+        background: $color5;
+        font-family: $font1;
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+}
+
+
+.formulario {
+    color: $color4;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 15px 3px $color7;
+    background: $color5;
+    font-family: $font1;
+    font-size: 20px;
+}
+
+
